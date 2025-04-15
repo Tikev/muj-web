@@ -1,34 +1,65 @@
-/* Nastavení zajímavého šedivého pozadí pro celý web */
 body {
     margin: 0;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #d3d3d3, #a9a9a9);
-    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: black; /* Set background to plain black */
 }
 
-/* Stylizace tlačítka */
-button {
-    padding: 20px 40px;
-    font-size: 1.5rem;
+canvas {
+    display: block;
+    background-color: transparent; /* Make canvas transparent */
+}
+
+#sliderContainer {
+    position: fixed; /* Changed to fixed for consistent positioning */
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#frequencySlider {
+    width: 150px;
+}
+
+#scoreDisplay {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
     font-weight: bold;
-    color: white;
-    background: linear-gradient(135deg, #ff7f50, #ff4500);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+#infoDisplay {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 15px;
 }
 
-button:active {
-    transform: scale(1.05);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+.neon-blue {
+    filter: drop-shadow(0 0 10px #00f) drop-shadow(0 0 20px #00f);
+}
+
+.neon-red {
+    filter: drop-shadow(0 0 10px #f00) drop-shadow(0 0 20px #f00);
+}
+
+.neon-yellow {
+    filter: drop-shadow(0 0 10px #ff0) drop-shadow(0 0 20px #ff0);
 }
